@@ -3,6 +3,9 @@
 
 namespace MoreValheim.GamePatches
 {
+    /// <summary>
+    /// Adds custom item to ZNetScene to make them save persistent
+    /// </summary>
     class ZNetViewPatch
     {
         [HarmonyPatch(typeof(ZNetScene))]

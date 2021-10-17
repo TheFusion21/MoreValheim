@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace MoreValheim.GamePatches
 {
+
+    /// <summary>
+    /// Add drop for sand on shores
+    /// </summary>
     [HarmonyPatch(typeof(TerrainOp))]
     [HarmonyPatch("OnPlaced")]
     class TerrainOpPatch

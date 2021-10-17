@@ -198,7 +198,6 @@ namespace MoreValheim
 
         private void Awake()
         {
-            
             instance = this;
         }
 
@@ -206,7 +205,6 @@ namespace MoreValheim
         {
             if(assets != null)
                 assets.Unload(true);
-            
         }
 
         public void LoadAssets()
@@ -214,17 +212,23 @@ namespace MoreValheim
             //Load the interface assembly to access interace e.g MaterialInterface
             Assembly.Load(Properties.Resources.MoreValheimInterface);
 
+            //Load the asset bundle for piece/item prefabs
             assets = AssetBundle.LoadFromMemory(Properties.Resources.itemdrops);
 
+            //Get the normal ObjectDB to be able to reference default items/pieces
             odb = FejdStartup.instance.m_gameMainPrefab.GetComponent<ObjectDB>();
 
+            //Get available craftin stations
             stations = new List<CraftingStation>(Resources.FindObjectsOfTypeAll<CraftingStation>());
 
+            //Load all materials that we can reference in the MaterialInterface
             materials.AddRange(Resources.FindObjectsOfTypeAll<Material>());
             materials.AddRange(assets.LoadAllAssets<Material>());
 
+            //Load prefabs assets
             GameObject[] prefabs = assets.LoadAllAssets<GameObject>();
 
+            //Process and prepare them
             foreach (var prefab in prefabs)
             {
                 if (prefab.GetComponent<ItemDrop>() != null)
@@ -233,6 +237,8 @@ namespace MoreValheim
                     LoadPiece(prefab);
 
             }
+
+            //Add recipes from list
             foreach (var recipeInterface in recipeInterfaces)
             {
                 var recipe = ScriptableObject.CreateInstance<Recipe>();
@@ -280,6 +286,7 @@ namespace MoreValheim
             Logger.LogInfo($"Loaded {m_customRecipes.Count} recipes");
             Logger.LogInfo($"Loaded {m_customStatusEffects.Count} status effects");
             Logger.LogInfo($"Loaded {m_customPieces.Count} pieces");
+
             loaded = true;
         }
         
@@ -440,7 +447,5 @@ namespace MoreValheim
             m_customRecipes.Clear();
             m_customItemByHash.Clear();
         }
-        
-       
     }
 }

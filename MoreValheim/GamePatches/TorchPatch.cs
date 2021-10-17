@@ -2,6 +2,9 @@
 
 namespace MoreValheim.GamePatches
 {
+    /// <summary>
+    /// Patches Players StatusEffect Update to incooperate Torch Freeze/Cold reduction
+    /// </summary>
     [HarmonyPatch(typeof(Player))]
     [HarmonyPatch("UpdateEnvStatusEffects")]
     class TorchPatch
