@@ -19,4 +19,7 @@ What this mod changes:
 - Torch can now remove cold or reduces freezing to cold
 - Mobs always spawn with at least one star
 ## Usage:
-Copy the MoreValheim.dll into the BepInEx plugin folder
+Copy the MoreValheim.dll into the BepInEx plugin folder\
+Please bear in mind
+- that you only can join server with this mod installed
+- worlds used with this mod may be unusable without it or somewhat corrupted
