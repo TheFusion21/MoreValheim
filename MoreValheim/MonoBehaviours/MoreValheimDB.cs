@@ -70,7 +70,7 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 3,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     },
@@ -92,7 +92,7 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 2,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     },
@@ -114,7 +114,7 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 4,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     },
@@ -136,7 +136,7 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     }
@@ -151,7 +151,7 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     }
@@ -166,7 +166,7 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Iron",
                         m_amountPerLevel = 1
                     },
@@ -178,8 +178,7 @@ namespace MoreValheim
                         m_amountPerLevel = 1
                     }
                 }
-            }
-            ,
+            },
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
@@ -189,8 +188,30 @@ namespace MoreValheim
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_gallow",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 4,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "LinenThread",
                         m_amountPerLevel = 1
                     }
                 }
