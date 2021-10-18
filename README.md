@@ -10,6 +10,7 @@ Pieces:\
 ![Wood cup](MoreValheimProject/Assets/Sprites/woodcup.png)
 ![Wood plate](MoreValheimProject/Assets/Sprites/woodplate.png)
 ![table candle](MoreValheimProject/Assets/Sprites/tablecandle.png)
+![goblet](MoreValheimProject/Assets/Sprites/goblet.png)
 
 Items:\
 ![Sand item](MoreValheimProject/Assets/Sprites/sand.png)

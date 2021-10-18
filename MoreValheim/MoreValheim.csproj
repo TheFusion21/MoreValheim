@@ -114,7 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GamePatches\CharacterPatch.cs" />
-    <Compile Include="GamePatches\HudPatch.cs" />
     <Compile Include="GamePatches\MoreLocalization.cs" />
     <Compile Include="GamePatches\ObjectDBPatch.cs" />
     <Compile Include="GamePatches\PlayerPatch.cs" />

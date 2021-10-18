@@ -64,7 +64,7 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "glasswindow1",
+                m_piece = "piece_glasswindow1",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
@@ -86,7 +86,7 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "glasswindow2",
+                m_piece = "piece_glasswindow2",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
@@ -108,7 +108,7 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "glassdoor1",
+                m_piece = "piece_glassdoor1",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
@@ -130,7 +130,7 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "woodplate",
+                m_piece = "piece_woodplate",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
@@ -145,7 +145,7 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "woodcup",
+                m_piece = "piece_woodcup",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
@@ -160,7 +160,7 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "tablecandle",
+                m_piece = "piece_tablecandle",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
@@ -175,6 +175,22 @@ namespace MoreValheim
                         m_amount = 1,
                         m_recover = false,
                         m_resItem = "Honey",
+                        m_amountPerLevel = 1
+                    }
+                }
+            }
+            ,
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_goblet",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Iron",
                         m_amountPerLevel = 1
                     }
                 }
@@ -209,6 +225,7 @@ namespace MoreValheim
 
         public void LoadAssets()
         {
+            loaded = true;
             //Load the interface assembly to access interace e.g MaterialInterface
             Assembly.Load(Properties.Resources.MoreValheimInterface);
 
@@ -255,17 +272,17 @@ namespace MoreValheim
                 recipe.m_item = recipeItem.GetComponent<ItemDrop>();
                 recipe.m_amount = recipeInterface.m_amount;
                 recipe.m_enabled = recipeInterface.m_enabled;
-                recipe.m_craftingStation = stations.Find(s => s.name == recipeInterface.m_craftingStation);
-                recipe.m_repairStation = stations.Find(s => s.name == recipeInterface.m_repairStation);
+                recipe.m_craftingStation = stations.Find(s => s.name.ToLower() == recipeInterface.m_craftingStation.ToLower());
+                recipe.m_repairStation = stations.Find(s => s.name.ToLower() == recipeInterface.m_repairStation.ToLower());
                 recipe.m_minStationLevel = recipeInterface.m_minStationLevel;
                 if (recipeInterface.m_resources == null)
                     continue;
                 recipe.m_resources = new Piece.Requirement[recipeInterface.m_resources.Length];
                 for(int i = 0;i<recipe.m_resources.Length;i++)
                 {
-                    var recipeItem2 = odb.m_items.Find(item => item.name == recipeInterface.m_resources[i].m_resItem);
+                    var recipeItem2 = odb.m_items.Find(item => item.name.ToLower() == recipeInterface.m_resources[i].m_resItem.ToLower());
                     if (recipeItem2 == null)
-                        recipeItem2 = m_customItems.Find(item => item.name == recipeInterface.m_resources[i].m_resItem);
+                        recipeItem2 = m_customItems.Find(item => item.name.ToLower() == recipeInterface.m_resources[i].m_resItem.ToLower());
                     if (recipeItem2 == null)
                     {
                         Logger.LogInfo("Cant find recipe item " + recipeInterface.m_item);
@@ -287,7 +304,7 @@ namespace MoreValheim
             Logger.LogInfo($"Loaded {m_customStatusEffects.Count} status effects");
             Logger.LogInfo($"Loaded {m_customPieces.Count} pieces");
 
-            loaded = true;
+            
         }
         
         private void LoadItem(GameObject prefab)
@@ -339,11 +356,21 @@ namespace MoreValheim
 
             foreach (var trans in prefab.GetComponentsInChildren<Transform>(true))
             {
-                if(trans.gameObject.name.Contains("snappoint"))
+                trans.gameObject.layer = 10;
+
+                if (trans.gameObject.name.Contains("snappoint"))
                 {
                     trans.tag = "snappoint";
                 }
-                trans.gameObject.layer = 10;
+                else if (trans.gameObject.name.ToLower().Contains("playerbase") || trans.gameObject.name.ToLower().Contains("firewarmth"))
+                {
+                    trans.gameObject.layer = 14;
+                }
+                else if(trans.GetComponent<Light>() != null)
+                {
+                    trans.gameObject.layer = 12;
+                }
+                
             }
 
             //Find every materialInterface to set apropiate material ingame
