@@ -4,6 +4,7 @@ using System.Reflection;
 using UnityEngine;
 using MoreValheim.GamePatches;
 using HarmonyLib.Tools;
+using MoreValheim.MonoBehaviours;
 
 namespace MoreValheim
 {
@@ -70,7 +71,9 @@ namespace MoreValheim
 
             var postfix = typeof(VersionPatch).GetMethod("GetVersionString", BindingFlags.Static | BindingFlags.Public);
 
-            harmony.Patch(mi, postfix: new HarmonyMethod(postfix));
+            var postfixMethod = new HarmonyMethod(postfix);
+
+            harmony.Patch(mi, postfix: postfixMethod);
         }
 
         private void Awake()
@@ -92,11 +95,15 @@ namespace MoreValheim
             HarmonyFileLog.Enabled = true;
             //Custom patches
             harmony = new Harmony(Info.Metadata.GUID);
-            PatchVersion();
+            
             harmony.PatchAll();
             Logger.LogInfo($"[{Info.Metadata.Name}:{Info.Metadata.Version}] loaded!");
         }
 
+        private void Start()
+        {
+            PatchVersion();
+        }
         private void OnDestroy()
         {
             if (MoreValheimDB.instance != null)

@@ -2,6 +2,7 @@
 using HarmonyLib;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreValheim.MonoBehaviours;
 
 namespace MoreValheim.GamePatches
 {

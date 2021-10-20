@@ -4,7 +4,7 @@ using UnityEngine;
 using BepInEx.Logging;
 using System.Reflection;
 
-namespace MoreValheim
+namespace MoreValheim.MonoBehaviours
 {
     class MoreValheimDB : MonoBehaviour
     {
@@ -212,6 +212,21 @@ namespace MoreValheim
                         m_amount = 2,
                         m_recover = true,
                         m_resItem = "LinenThread",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_glasscup",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Glass",
                         m_amountPerLevel = 1
                     }
                 }

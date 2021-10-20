@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using HarmonyLib;
 
 namespace MoreValheim.GamePatches
 {
@@ -13,6 +10,7 @@ namespace MoreValheim.GamePatches
     {
         public static Version version;
 
+        [HarmonyAfter(new string[] { "org.bepinex.plugins.valheim_plus" })]
         public static void GetVersionString(ref string __result)
         {
             __result = __result + "@" + version;
