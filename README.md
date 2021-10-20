@@ -12,6 +12,7 @@ Pieces:\
 ![table candle](MoreValheimProject/Assets/Sprites/tablecandle.png)
 ![goblet](MoreValheimProject/Assets/Sprites/goblet.png)
 ![gallow](MoreValheimProject/Assets/Sprites/gallow.png)
+![Glass cup](MoreValheimProject/Assets/Sprites/glasscup.png)
 
 Items:\
 ![Sand item](MoreValheimProject/Assets/Sprites/sand.png)
