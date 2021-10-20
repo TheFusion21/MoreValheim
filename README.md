@@ -13,6 +13,9 @@ Pieces:\
 ![goblet](MoreValheimProject/Assets/Sprites/goblet.png)
 ![gallow](MoreValheimProject/Assets/Sprites/gallow.png)
 ![Glass cup](MoreValheimProject/Assets/Sprites/glasscup.png)
+![Flag 01](MoreValheimProject/Assets/Sprites/flagpole01.png)
+![Flag 02](MoreValheimProject/Assets/Sprites/flagpole02.png)
+![Flag 03](MoreValheimProject/Assets/Sprites/flagpole03.png)
 
 Items:\
 ![Sand item](MoreValheimProject/Assets/Sprites/sand.png)
