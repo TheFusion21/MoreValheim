@@ -57,6 +57,9 @@
     <Reference Include="UnityEngine">
       <HintPath>..\2019.4.24\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>..\2019.4.24\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
       <HintPath>..\2019.4.24\UnityEngine.AssetBundleModule.dll</HintPath>
     </Reference>
@@ -67,6 +70,7 @@
   <ItemGroup>
     <Compile Include="BundleExporter.cs" />
     <Compile Include="FireplaceInterface.cs" />
+    <Compile Include="Flag.cs" />
     <Compile Include="FontInterface.cs" />
     <Compile Include="MaterialInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

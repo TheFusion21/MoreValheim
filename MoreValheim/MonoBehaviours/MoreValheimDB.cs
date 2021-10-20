@@ -230,6 +230,114 @@ namespace MoreValheim.MonoBehaviours
                         m_amountPerLevel = 1
                     }
                 }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_flagpole01",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 6,
+                        m_recover = true,
+                        m_resItem = "LeatherScraps",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = false,
+                        m_resItem = "Blueberries",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 3,
+                        m_recover = false,
+                        m_resItem = "Cloudberry",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_flagpole02",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 6,
+                        m_recover = true,
+                        m_resItem = "LeatherScraps",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = false,
+                        m_resItem = "Blueberries",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Cloudberry",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Raspberry",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_flagpole03",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 6,
+                        m_recover = true,
+                        m_resItem = "LeatherScraps",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 4,
+                        m_recover = false,
+                        m_resItem = "Raspberry",
+                        m_amountPerLevel = 1
+                    }
+                }
             }
         };
 
