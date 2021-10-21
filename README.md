@@ -20,6 +20,9 @@ Building:\
 ![Glass door](MoreValheimProject/Assets/Sprites/glassdoor1.png)
 ![Wall roof fill](MoreValheimProject/Assets/Sprites/woodwallrooffill.png)
 ![Wall roof fill 45](MoreValheimProject/Assets/Sprites/woodwallrooffill45.png)
+![Wall roof slope 26](MoreValheimProject/Assets/Sprites/woodwallslope26.png)
+![Wall roof slope 45](MoreValheimProject/Assets/Sprites/woodwallslope45.png)
+![Wall roof slope 64](MoreValheimProject/Assets/Sprites/woodwallslope64.png)
 
 Items:\
 ![Sand item](MoreValheimProject/Assets/Sprites/sand.png)
