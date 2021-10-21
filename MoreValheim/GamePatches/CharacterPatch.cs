@@ -2,6 +2,9 @@
 
 namespace MoreValheim.GamePatches
 {
+    /// <summary>
+    /// This patch ensures all mobs spawned have at least one star
+    /// </summary>
     [HarmonyPatch(typeof(Character))]
     [HarmonyPatch("Awake")]
     class CharacterPatch

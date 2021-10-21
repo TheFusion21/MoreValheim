@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 3636881227320552384}
   - component: {fileID: 3672016436057393573}
   m_Layer: 0
-  m_Name: glassdoor1
+  m_Name: piece_glassdoor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -920,7 +920,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f345d34edb092784eb3518d506ac2394, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 

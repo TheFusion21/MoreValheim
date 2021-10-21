@@ -4,7 +4,7 @@ using UnityEngine;
 using BepInEx.Logging;
 using System.Reflection;
 
-namespace MoreValheim
+namespace MoreValheim.MonoBehaviours
 {
     class MoreValheimDB : MonoBehaviour
     {
@@ -64,13 +64,13 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "glasswindow1",
+                m_piece = "piece_glasswindow1",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
                     {
                         m_amount = 3,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     },
@@ -86,13 +86,13 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "glasswindow2",
+                m_piece = "piece_glasswindow2",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
                     {
                         m_amount = 2,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     },
@@ -108,13 +108,13 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "glassdoor1",
+                m_piece = "piece_glassdoor1",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
                     {
                         m_amount = 4,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     },
@@ -130,13 +130,13 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "woodplate",
+                m_piece = "piece_woodplate",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     }
@@ -145,13 +145,13 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "woodcup",
+                m_piece = "piece_woodcup",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Wood",
                         m_amountPerLevel = 1
                     }
@@ -160,13 +160,13 @@ namespace MoreValheim
             new PieceInterface
             {
                 m_craftingStation = "$piece_workbench",
-                m_piece = "tablecandle",
+                m_piece = "piece_tablecandle",
                 m_resources = new RequirementInterface[]
                 {
                     new RequirementInterface
                     {
                         m_amount = 1,
-                        m_recover = false,
+                        m_recover = true,
                         m_resItem = "Iron",
                         m_amountPerLevel = 1
                     },
@@ -175,6 +175,241 @@ namespace MoreValheim
                         m_amount = 1,
                         m_recover = false,
                         m_resItem = "Honey",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_goblet",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_gallow",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 4,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "LinenThread",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_glasscup",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Glass",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_flagpole01",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 6,
+                        m_recover = true,
+                        m_resItem = "LeatherScraps",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = false,
+                        m_resItem = "Blueberries",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 3,
+                        m_recover = false,
+                        m_resItem = "Cloudberry",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_flagpole02",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 6,
+                        m_recover = true,
+                        m_resItem = "LeatherScraps",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = false,
+                        m_resItem = "Blueberries",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Cloudberry",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 1,
+                        m_recover = false,
+                        m_resItem = "Raspberry",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_flagpole03",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Iron",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 6,
+                        m_recover = true,
+                        m_resItem = "LeatherScraps",
+                        m_amountPerLevel = 1
+                    },
+                    new RequirementInterface
+                    {
+                        m_amount = 4,
+                        m_recover = false,
+                        m_resItem = "Raspberry",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_roof_fill",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_roof_fill45",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_slope26",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_slope45",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_slope64",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
                         m_amountPerLevel = 1
                     }
                 }
@@ -198,7 +433,6 @@ namespace MoreValheim
 
         private void Awake()
         {
-            
             instance = this;
         }
 
@@ -206,25 +440,31 @@ namespace MoreValheim
         {
             if(assets != null)
                 assets.Unload(true);
-            
         }
 
         public void LoadAssets()
         {
+            loaded = true;
             //Load the interface assembly to access interace e.g MaterialInterface
             Assembly.Load(Properties.Resources.MoreValheimInterface);
 
+            //Load the asset bundle for piece/item prefabs
             assets = AssetBundle.LoadFromMemory(Properties.Resources.itemdrops);
 
+            //Get the normal ObjectDB to be able to reference default items/pieces
             odb = FejdStartup.instance.m_gameMainPrefab.GetComponent<ObjectDB>();
 
+            //Get available craftin stations
             stations = new List<CraftingStation>(Resources.FindObjectsOfTypeAll<CraftingStation>());
 
+            //Load all materials that we can reference in the MaterialInterface
             materials.AddRange(Resources.FindObjectsOfTypeAll<Material>());
             materials.AddRange(assets.LoadAllAssets<Material>());
 
+            //Load prefabs assets
             GameObject[] prefabs = assets.LoadAllAssets<GameObject>();
 
+            //Process and prepare them
             foreach (var prefab in prefabs)
             {
                 if (prefab.GetComponent<ItemDrop>() != null)
@@ -233,6 +473,8 @@ namespace MoreValheim
                     LoadPiece(prefab);
 
             }
+
+            //Add recipes from list
             foreach (var recipeInterface in recipeInterfaces)
             {
                 var recipe = ScriptableObject.CreateInstance<Recipe>();
@@ -249,17 +491,17 @@ namespace MoreValheim
                 recipe.m_item = recipeItem.GetComponent<ItemDrop>();
                 recipe.m_amount = recipeInterface.m_amount;
                 recipe.m_enabled = recipeInterface.m_enabled;
-                recipe.m_craftingStation = stations.Find(s => s.name == recipeInterface.m_craftingStation);
-                recipe.m_repairStation = stations.Find(s => s.name == recipeInterface.m_repairStation);
+                recipe.m_craftingStation = stations.Find(s => s.name.ToLower() == recipeInterface.m_craftingStation.ToLower());
+                recipe.m_repairStation = stations.Find(s => s.name.ToLower() == recipeInterface.m_repairStation.ToLower());
                 recipe.m_minStationLevel = recipeInterface.m_minStationLevel;
                 if (recipeInterface.m_resources == null)
                     continue;
                 recipe.m_resources = new Piece.Requirement[recipeInterface.m_resources.Length];
                 for(int i = 0;i<recipe.m_resources.Length;i++)
                 {
-                    var recipeItem2 = odb.m_items.Find(item => item.name == recipeInterface.m_resources[i].m_resItem);
+                    var recipeItem2 = odb.m_items.Find(item => item.name.ToLower() == recipeInterface.m_resources[i].m_resItem.ToLower());
                     if (recipeItem2 == null)
-                        recipeItem2 = m_customItems.Find(item => item.name == recipeInterface.m_resources[i].m_resItem);
+                        recipeItem2 = m_customItems.Find(item => item.name.ToLower() == recipeInterface.m_resources[i].m_resItem.ToLower());
                     if (recipeItem2 == null)
                     {
                         Logger.LogInfo("Cant find recipe item " + recipeInterface.m_item);
@@ -280,7 +522,8 @@ namespace MoreValheim
             Logger.LogInfo($"Loaded {m_customRecipes.Count} recipes");
             Logger.LogInfo($"Loaded {m_customStatusEffects.Count} status effects");
             Logger.LogInfo($"Loaded {m_customPieces.Count} pieces");
-            loaded = true;
+
+            
         }
         
         private void LoadItem(GameObject prefab)
@@ -332,11 +575,21 @@ namespace MoreValheim
 
             foreach (var trans in prefab.GetComponentsInChildren<Transform>(true))
             {
-                if(trans.gameObject.name.Contains("snappoint"))
+                trans.gameObject.layer = 10;
+
+                if (trans.gameObject.name.Contains("snappoint"))
                 {
                     trans.tag = "snappoint";
                 }
-                trans.gameObject.layer = 10;
+                else if (trans.gameObject.name.ToLower().Contains("playerbase") || trans.gameObject.name.ToLower().Contains("firewarmth"))
+                {
+                    trans.gameObject.layer = 14;
+                }
+                else if(trans.GetComponent<Light>() != null)
+                {
+                    trans.gameObject.layer = 12;
+                }
+                
             }
 
             //Find every materialInterface to set apropiate material ingame
@@ -440,7 +693,5 @@ namespace MoreValheim
             m_customRecipes.Clear();
             m_customItemByHash.Clear();
         }
-        
-       
     }
 }

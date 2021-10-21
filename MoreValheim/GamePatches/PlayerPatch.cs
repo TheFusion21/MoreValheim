@@ -1,9 +1,13 @@
 ﻿using HarmonyLib;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreValheim.MonoBehaviours;
 
 namespace MoreValheim.GamePatches
 {
+    /// <summary>
+    /// Add search from MoreValheimDB
+    /// </summary>
     [HarmonyPatch(typeof(Player))]
     [HarmonyPatch("GetAvailableRecipes")]
     class PlayerGetAvailableRecipesPatch
@@ -27,6 +31,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Add search from MoreValheimDB
+    /// </summary>
     [HarmonyPatch(typeof(Player))]
     [HarmonyPatch("UpdateKnownRecipesList")]
     class PlayerUpdateKnownRecipesListPatch
@@ -50,6 +57,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Add custom pieces to player buildpiece list
+    /// </summary>
     [HarmonyPatch(typeof(Player))]
     [HarmonyPatch("SetPlaceMode")]
     class PlayerSetPlaceModePatch

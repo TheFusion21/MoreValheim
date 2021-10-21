@@ -4,6 +4,9 @@ using System.IO;
 
 namespace MoreValheim.GamePatches
 {
+    /// <summary>
+    /// This patch add custom localization for our loaded stuff
+    /// </summary>
     [HarmonyPatch(typeof(Localization))]
     [HarmonyPatch("SetupLanguage")]
     class MoreLocalization

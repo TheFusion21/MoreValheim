@@ -2,9 +2,13 @@
 using HarmonyLib;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreValheim.MonoBehaviours;
 
 namespace MoreValheim.GamePatches
 {
+    /// <summary>
+    /// Add Our HashUpdate
+    /// </summary>
     [HarmonyPatch(typeof(ObjectDB))]
     [HarmonyPatch("UpdateItemHashes")]
     class ObjectDBUpdateItemHashesPatch
@@ -17,6 +21,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Adds search for custom items
+    /// </summary>
     [HarmonyPatch(typeof(ObjectDB))]
     [HarmonyPatch("GetItemPrefab")]
     [HarmonyPatch(new System.Type[] { typeof(string) })]
@@ -37,6 +44,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Adds search for custom items
+    /// </summary>
     [HarmonyPatch(typeof(ObjectDB))]
     [HarmonyPatch("GetItemPrefab")]
     [HarmonyPatch(new System.Type[] { typeof(int) })]
@@ -55,6 +65,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Adds search for custom status effects
+    /// </summary>
     [HarmonyPatch(typeof(ObjectDB))]
     [HarmonyPatch("GetStatusEffect")]
     class ObjectDBGetStatusEffectPatch
@@ -75,6 +88,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Adds custom item to list
+    /// </summary>
     [HarmonyPatch(typeof(ObjectDB))]
     [HarmonyPatch("GetAllItems")]
     class ObjectDBGetAllItemsPatch
@@ -90,6 +106,9 @@ namespace MoreValheim.GamePatches
         }
     }
 
+    /// <summary>
+    /// Add search for custom recipes
+    /// </summary>
     [HarmonyPatch(typeof(ObjectDB))]
     [HarmonyPatch("GetRecipe")]
     class ObjectDBGetRecipePatch
