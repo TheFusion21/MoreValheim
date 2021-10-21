@@ -338,6 +338,36 @@ namespace MoreValheim.MonoBehaviours
                         m_amountPerLevel = 1
                     }
                 }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_roof_fill",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    }
+                }
+            },
+            new PieceInterface
+            {
+                m_craftingStation = "$piece_workbench",
+                m_piece = "piece_wood_wall_roof_fill45",
+                m_resources = new RequirementInterface[]
+                {
+                    new RequirementInterface
+                    {
+                        m_amount = 2,
+                        m_recover = true,
+                        m_resItem = "Wood",
+                        m_amountPerLevel = 1
+                    }
+                }
             }
         };
 
