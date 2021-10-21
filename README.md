@@ -3,10 +3,7 @@
 
 ## About:
 What this mod add:\
-Pieces:\
-![Glass window1](MoreValheimProject/Assets/Sprites/glasswindow1.png)
-![Glass window2](MoreValheimProject/Assets/Sprites/glasswindow2.png)
-![Glass door](MoreValheimProject/Assets/Sprites/glassdoor1.png)
+Furniture:\
 ![Wood cup](MoreValheimProject/Assets/Sprites/woodcup.png)
 ![Wood plate](MoreValheimProject/Assets/Sprites/woodplate.png)
 ![table candle](MoreValheimProject/Assets/Sprites/tablecandle.png)
@@ -16,6 +13,13 @@ Pieces:\
 ![Flag 01](MoreValheimProject/Assets/Sprites/flagpole01.png)
 ![Flag 02](MoreValheimProject/Assets/Sprites/flagpole02.png)
 ![Flag 03](MoreValheimProject/Assets/Sprites/flagpole03.png)
+
+Building:\
+![Glass window1](MoreValheimProject/Assets/Sprites/glasswindow1.png)
+![Glass window2](MoreValheimProject/Assets/Sprites/glasswindow2.png)
+![Glass door](MoreValheimProject/Assets/Sprites/glassdoor1.png)
+![Wall roof fill](MoreValheimProject/Assets/Sprites/woodwallrooffill.png)
+![Wall roof fill 45](MoreValheimProject/Assets/Sprites/woodwallrooffill45.png)
 
 Items:\
 ![Sand item](MoreValheimProject/Assets/Sprites/sand.png)
